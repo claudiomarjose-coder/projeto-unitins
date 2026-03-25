@@ -1,0 +1,51 @@
+{
+  "info": {
+    "name": "CRUD Produtos Flask",
+    "_postman_id": "12345",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Listar Produtos",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:5000/produtos"
+      }
+    },
+    {
+      "name": "Criar Produto",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Teclado\",\n  \"preco\": 100\n}"
+        },
+        "url": "http://127.0.0.1:5000/produtos"
+      }
+    },
+    {
+      "name": "Atualizar Produto",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Teclado Gamer\",\n  \"preco\": 150\n}"
+        },
+        "url": "http://127.0.0.1:5000/produtos/1"
+      }
+    },
+    {
+      "name": "Deletar Produto",
+      "request": {
+        "method": "DELETE",
+        "url": "http://127.0.0.1:5000/produtos/1"
+      }
+    }
+  ]
+}
